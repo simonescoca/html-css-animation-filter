@@ -68,6 +68,8 @@
 
 .ex-11-icon {
     font-size: 60px;
+    /**/
+    transition: all 0.7s;
 }
 
 .ex-12-button, .ex-13-button {
@@ -159,11 +161,36 @@
 }
 
 .ex-10-icon {
-
+    animation-name: spin;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-.ex-11-icon {
+@keyframes spin {
+    from{
+        transform: rotate(1turn);
+    }
+}
 
+.ex-11-icon:hover {
+    animation-name: partial-spin;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes partial-spin {
+    0%{
+        transform: rotate(0);
+    }
+
+    75%{
+        transform: rotate(0.75turn);
+    }
+
+    100%{
+        transform: rotate(0);
+    }
 }
 
 .ex-12-button, .ex-13-button {
